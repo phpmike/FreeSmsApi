@@ -1,0 +1,28 @@
+{
+    "name": "mv/free-sms-api",
+    "type": "library",
+    "description": "Library to use api free mobile sending SMS",
+    "keywords": ["sms", "free", "sms free", "mobile", "sms free mobile"],
+    "homepage": "https://github.com/phpmike/FreeSmsApi",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Michaël VEROUX",
+            "homepage": "https://github.com/phpmike"
+        }
+    ],
+    "archive": {
+        "exclude": ["Tests/", "build/", "/.travis.yml", "/build.xml", "phpunit.xml.dist"]
+    },
+    "autoload": {
+        "psr-4": { "Mv\\free-sms-api\\": "lib/" }
+    },
+    "require": {
+        "php-curl-class/php-curl-class": "~3.5.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
