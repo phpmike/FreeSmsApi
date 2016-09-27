@@ -4,7 +4,7 @@
     "description": "Library to use api free mobile sending SMS",
     "keywords": ["sms", "free", "sms free", "mobile", "sms free mobile"],
     "homepage": "https://github.com/phpmike/FreeSmsApi",
-    "license": "GPL",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "Michaël VEROUX",

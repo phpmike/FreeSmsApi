@@ -12,6 +12,7 @@ use Mv\FreeSmsApi\Exception\FailedException;
 
 /**
  * Class Sender
+ *
  * @package Mv\FreeSmsApi\Sms
  * @author Michaël VEROUX
  */
@@ -49,6 +50,7 @@ class Sender implements SenderInterface
 
     /**
      * @param string $httpFreeApi
+     *
      * @return $this
      */
     public function setHttpFreeApi($httpFreeApi)
@@ -60,6 +62,7 @@ class Sender implements SenderInterface
 
     /**
      * @param string $message
+     *
      * @return $this
      * @author Michaël VEROUX
      */
@@ -72,12 +75,13 @@ class Sender implements SenderInterface
 
     /**
      * @param string $message
+     *
      * @return $this
      * @author Michaël VEROUX
      */
     public function addMessage($message)
     {
-        if('' !== $this->message) {
+        if ('' !== $this->message) {
             $this->message .= "\r\n";
         }
 
@@ -95,6 +99,10 @@ class Sender implements SenderInterface
         return $this->message;
     }
 
+    /**
+     * @return void
+     * @author Michaël VEROUX
+     */
     public function reset()
     {
         $this->message = '';
@@ -107,17 +115,17 @@ class Sender implements SenderInterface
     public function send()
     {
         $data = array(
-            'user'  => $this->freeUser,
-            'pass'  => $this->freePass,
-            'msg'   => $this->getMessage(),
+            'user' => $this->freeUser,
+            'pass' => $this->freePass,
+            'msg'  => $this->getMessage(),
         );
 
         $curl = new Curl();
         $curl->get($this->httpFreeApi, $data);
 
-        if(0 < $curl->error_code) {
+        if (0 < $curl->error_code) {
             $errorMsg = 'Undefined';
-            switch($curl->error_code) {
+            switch ($curl->error_code) {
                 case 400:
                     $errorMsg = 'Un des paramètres obligatoires est manquant.';
                     break;
