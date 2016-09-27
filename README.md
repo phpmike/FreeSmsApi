@@ -3,6 +3,8 @@ MvFreeSmsApi
 
 This API is for sending notification to your Free Mobile (Require Free Mobile account with api key)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/688260e2-6199-41f8-a359-8bb3352346d6/small.png)](https://insight.sensiolabs.com/projects/688260e2-6199-41f8-a359-8bb3352346d6)
+
 Install
 -------
 
